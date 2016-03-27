@@ -1,0 +1,60 @@
+{
+    "name": "TrainTrax",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://localhost/TrainTrax/",
+        "exportPath": "/Volumes/server/data/ApacheData/dev.local/trainTrax",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": true,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "3.5.0",
+    "xdsBuild": 268,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "touch24",
+    "viewOrderMap": {
+        "view": [
+            "47da8fa2-4236-45ad-86d1-eb00552a4b99",
+            "88247972-ba3f-4c64-912c-58738913b31f",
+            "027cba7a-1628-4e31-a3ab-d1abe796e6ed",
+            "12805de3-7c09-49d8-baa7-7213e414f2e0"
+        ],
+        "store": [
+            "0b16e04b-0313-4740-baa5-f1cd992ebdac",
+            "2c719da2-e7a2-493a-973f-d43cd12fa69d"
+        ],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "b50afba7-c06a-4ed2-9ef4-415eefb54850",
+            "2f89c116-614a-4730-887d-af82424adcb8",
+            "44639fc6-09f6-4440-86da-c8ad2476a738",
+            "7bb2023c-56dc-46a9-aa83-80f1d2c91e49",
+            "e29c8697-e088-4703-a310-7d87f8698d25"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

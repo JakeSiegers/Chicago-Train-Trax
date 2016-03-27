@@ -1,0 +1,155 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stopsonline",
+        "designer|userClassName": "TrainLineStops",
+        "layout": "fit"
+    },
+    "name": "Lines1",
+    "designerId": "027cba7a-1628-4e31-a3ab-d1abe796e6ed",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "itemId": "stopsTitlebar",
+                "style": null,
+                "title": "[Line Name]"
+            },
+            "name": "MyToolbar",
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "c66a4bab-e37f-4dcd-9c59-71b58357aff4",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "back",
+                        "itemId": "mybutton",
+                        "text": "Back",
+                        "ui": "back"
+                    },
+                    "name": "MyButton",
+                    "designerId": "41d383da-8772-4654-a771-664e26430223",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybuttonTap",
+                                "implHandler": [
+                                    "Ext.ComponentQuery.query('#cardsScreen')[0].setActiveItem('#trainLinesScreen');"
+                                ],
+                                "name": "tap"
+                            },
+                            "name": "onMybuttonTap",
+                            "designerId": "35671f58-c85e-4373-9f6a-257a87095a77"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "itemId": "trainLineStatusBar"
+            },
+            "name": "MyToolbar2",
+            "designerId": "2c64488c-7896-4080-a3ff-61f20e92b165",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "tt_trainLineStatus"
+                        ],
+                        "itemId": "trainLineStatusLabel",
+                        "layout|flex": 1,
+                        "styleHtmlCls": null
+                    },
+                    "name": "MyLabel",
+                    "designerId": "89e6962c-a6d8-46a4-85da-0a51a4511b14"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "forward",
+                        "docked": null,
+                        "text": "Details",
+                        "ui": "forward"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "700b3222-7a40-45a2-b3f3-d7b40bc109d5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "trainLineStopsList",
+                "store": "TrainLineStopsStore"
+            },
+            "name": "MyList1",
+            "designerId": "6c6e1be0-d16e-4f6b-884d-0eec58f54804",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>{direction_id} {stop_name}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "a6c7e56f-62e9-4b71-a7e0-05d5de25c922"
+                }
+            ]
+        }
+    ]
+}

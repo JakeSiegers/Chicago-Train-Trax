@@ -1,0 +1,102 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "lines",
+        "designer|userClassName": "TrainLines",
+        "layout": "fit"
+    },
+    "name": "MyPanel",
+    "designerId": "88247972-ba3f-4c64-912c-58738913b31f",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Train Trax"
+            },
+            "name": "MyToolbar",
+            "designerId": "5389b012-273f-40e7-b443-9a1d1d2b07da"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemCls": "tt_lineListItem",
+                "itemId": "trainLineList",
+                "store": "TrainLineStore"
+            },
+            "name": "MyList",
+            "designerId": "900bce2f-e6e3-4e91-a7eb-10f1e045dc55",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"tt_lineListItemInner\" style=\"color:#{RouteTextColor}; background-color:#{RouteColorCode};\">{Route} <tpl if='RouteStatus != \"Normal Service\"'><i class=\"fa fa-exclamation-triangle\" style=\"float:right;\"></i></tpl></div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "165d604c-65a1-45e7-8809-14f90fe835b2"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onTrainLineListSelect",
+                        "implHandler": [
+                            "AERP.Ajax.request({",
+                            "    url:'getStationsOfLine',",
+                            "    params:{lineId:record.get('ServiceId')},",
+                            "    success:function(reply){",
+                            "        Ext.ComponentQuery.query('#trainLineStopsList')[0].getStore().setData(reply.data);",
+                            "        Ext.ComponentQuery.query('#cardsScreen')[0].setActiveItem('#trainLineStopsScreen');",
+                            "        Ext.ComponentQuery.query('#stopsTitlebar')[0].setStyle('background:#'+record.get('RouteColorCode')+';');",
+                            "        var bar = Ext.ComponentQuery.query('#stopsTitlebar')[0].setTitle('<span style=\"text-shadow:none; color:#'+record.get('RouteTextColor')+';\">'+record.get('NiceName')+'</span>');",
+                            "",
+                            "        if(record.get('RouteStatus') == \"Normal Service\"){",
+                            "            Ext.ComponentQuery.query('#trainLineStatusBar')[0].hide();",
+                            "        }else{",
+                            "            Ext.ComponentQuery.query('#trainLineStatusBar')[0].show();",
+                            "",
+                            "        }",
+                            "        Ext.ComponentQuery.query('#trainLineStatusLabel')[0].setHtml('<div class=\"marquee\">'+record.get('RouteStatus')+'</div>');",
+                            "        Ext.ComponentQuery.query('#trainLineStatusBar')[0].setStyle('background:#'+record.get('RouteStatusColor')+';');",
+                            "    }",
+                            "});",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "name": "select"
+                    },
+                    "name": "onTrainLineListSelect",
+                    "designerId": "9fd77f99-fefb-4725-b5cd-f6776b5f6b3f"
+                }
+            ]
+        }
+    ]
+}

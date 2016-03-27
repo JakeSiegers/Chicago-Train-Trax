@@ -1,0 +1,91 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "scroll",
+        "container|animation.direction": null,
+        "designer|initialView": true,
+        "designer|userClassName": "Cards",
+        "itemId": "cardsScreen",
+        "layout": "card"
+    },
+    "name": "MyPanel",
+    "designerId": "47da8fa2-4236-45ad-86d1-eb00552a4b99",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "startScreen"
+            },
+            "name": "start",
+            "designerId": "3049e2f6-db6e-42a2-9475-5d33bb401649",
+            "masterInstanceId": "12805de3-7c09-49d8-baa7-7213e414f2e0"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "trainLinesScreen"
+            },
+            "name": "trainlines",
+            "designerId": "a6a7aa77-9670-412d-9e27-b062c423ddae",
+            "masterInstanceId": "88247972-ba3f-4c64-912c-58738913b31f"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "trainLineStopsScreen"
+            },
+            "name": "trainlinestops",
+            "designerId": "8beb4701-1190-45ad-8345-f8837eec8c17",
+            "masterInstanceId": "027cba7a-1628-4e31-a3ab-d1abe796e6ed"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelInitialize",
+                "implHandler": [
+                    "this.mask();",
+                    "AERP.Ajax.request({",
+                    "    url:'listAllLines',",
+                    "    success:function(reply){",
+                    "        this.unmask();",
+                    "        Ext.ComponentQuery.query('#trainLineList')[0].getStore().setData(reply.data);",
+                    "        this.setActiveItem('#trainLinesScreen');",
+                    "    },",
+                    "    failure:function(){",
+                    "        this.unmask();",
+                    "    },",
+                    "    scope:this",
+                    "});"
+                ],
+                "name": "initialize"
+            },
+            "name": "onPanelInitialize",
+            "designerId": "cf23146a-3d79-4c18-9b42-3a597a119504"
+        }
+    ]
+}

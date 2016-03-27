@@ -1,0 +1,129 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrainLineStopsStore",
+        "storeId": "TrainLineStopsStore"
+    },
+    "name": "MyStore",
+    "designerId": "2c719da2-e7a2-493a-973f-d43cd12fa69d",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "direction_id"
+            },
+            "name": "field7",
+            "designerId": "62dc819f-3457-48d2-b62a-cc8c1fa9b316"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "location"
+            },
+            "name": "field8",
+            "designerId": "bb8e43c8-e70f-4011-a706-baa7c0c723fc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "map_id"
+            },
+            "name": "field9",
+            "designerId": "85dbfa8b-2735-47c8-8848-8f4c5716d303"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "station_descriptive_name"
+            },
+            "name": "field10",
+            "designerId": "83f2abf7-4372-45ce-a278-c95f8bf8c1d5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "station_name"
+            },
+            "name": "field11",
+            "designerId": "c0c5f34f-4513-4d78-b1c0-74ab6aad1130"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stop_id"
+            },
+            "name": "field12",
+            "designerId": "fe4187af-183c-4baa-b4cb-5d8562b696e7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stop_name"
+            },
+            "name": "field13",
+            "designerId": "b4514d81-ee53-42d1-aa51-8c3616b8190d"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy1",
+            "designerId": "5a522909-5ef4-4879-9e47-7a01d43e0995",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyArrayReader1",
+                    "designerId": "74095350-8b91-4344-831d-440ce57fc153"
+                }
+            ]
+        }
+    ]
+}

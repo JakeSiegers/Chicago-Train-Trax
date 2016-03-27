@@ -1,0 +1,45 @@
+@function getInvertedOverlayColor($color) {
+	@return if(lightness($color) > 50, rgba(0,0,0,0.8), rgba(255,255,255,0.8));
+}
+$page-bg-color: #202020;
+$loading-spinner-color: getInvertedOverlayColor($page-bg-color);
+$field-background-color: #ffffff;
+$form-bg-color: $field-background-color;
+$field-font-color: #000000;
+$form-dark: $field-font-color;
+$form-light: $field-background-color;
+$toolbar-input-bg: $field-background-color;
+$toolbar-input-color: $field-font-color;
+$base-color: #1d9099;
+$active-color: #e79c10;
+$alert-color: #d53a33;
+$confirm-color: #56c74b;
+$base-gradient: flat;
+$list-color: #000000;
+$field-label-color: #000000;
+$field-label-background-color: #f7f7f7;
+
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+
+
+.x-form, .x-form-fieldset {
+    .x-field, input, .x-form-fieldset-inner, .x-form-field {
+        background-color: lighten($field-background-color, 20) !important;
+        color: white !important;
+    }
+}
+.x-form-label {
+    background-color: $field-label-background-color;
+    color: $field-label-color;
+}
+.x-form-fieldset-title, .x-form-fieldset-instructions {
+    color: $field-label-color;
+}
+.x-input-el {
+    -webkit-text-fill-color: $field-font-color !important;
+}
+.x-slider-field, .x-toggle-field {
+    background-color: $field-background-color;
+}
+

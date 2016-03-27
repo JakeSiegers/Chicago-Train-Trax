@@ -1,0 +1,142 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrainLineStore",
+        "storeId": "TrainLineStore"
+    },
+    "name": "MyStore",
+    "designerId": "0b16e04b-0313-4740-baa5-f1cd992ebdac",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Route"
+            },
+            "name": "field",
+            "designerId": "42918327-72ac-4e2a-80ab-8cf90d2bed1d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RouteColorCode"
+            },
+            "name": "field1",
+            "designerId": "799c0871-c525-4ba9-bf1c-b836dae74034"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RouteTextColor"
+            },
+            "name": "field2",
+            "designerId": "088722bb-e1d3-418d-9c71-7dcc26edbdb1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ServiceId"
+            },
+            "name": "field3",
+            "designerId": "68412f18-b47f-495f-a76b-647e2b344a20"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RouteURL"
+            },
+            "name": "field4",
+            "designerId": "66037093-eeb6-4cd1-8903-d785c621c5ad"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RouteStatus"
+            },
+            "name": "field5",
+            "designerId": "4877921a-db36-494b-a168-605631f35e92"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RouteStatusColor"
+            },
+            "name": "field6",
+            "designerId": "49935a67-9cb6-42b7-834e-da874790dd11"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NiceName"
+            },
+            "name": "field14",
+            "designerId": "f99209a9-8f0e-4a6a-8478-65a7bd1c5ec6"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy",
+            "designerId": "5f595cad-8067-4058-82a0-27ea873a7c37",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyArrayReader",
+                    "designerId": "fe40b178-8c0a-4def-964d-ef79a31d1e40"
+                }
+            ]
+        }
+    ]
+}

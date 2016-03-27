@@ -1,0 +1,30 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "start",
+        "designer|userClassName": "Start"
+    },
+    "name": "MyPanel",
+    "designerId": "12805de3-7c09-49d8-baa7-7213e414f2e0",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Loading..."
+            },
+            "name": "MyToolbar1",
+            "designerId": "0fb059a2-1903-4848-ab47-77c00dd0451c"
+        }
+    ]
+}

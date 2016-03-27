@@ -1,0 +1,31 @@
+.tt_lineListItem{
+    border:none !important;
+}
+
+.tt_lineListItem .x-innerhtml{
+    padding:0px !important;
+    height:42px;
+}
+
+.tt_lineListItemInner{
+    height: 100%;
+    padding: 10px;
+}
+
+.tt_lineListItem.x-item-selected{
+    opacity: 0.5;
+}
+
+.tt_trainLineStatus .x-innerhtml{
+    overflow:hidden;
+}
+
+.tt_trainLineStatus .x-innerhtml .marquee{
+    animation: marquee 5s linear infinite;
+    white-space:nowrap;
+}
+
+@keyframes marquee {
+    0%   { margin-left: 100%}
+    100% { margin-left: -100% }
+}
