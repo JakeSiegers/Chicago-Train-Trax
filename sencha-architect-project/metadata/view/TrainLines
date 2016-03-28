@@ -73,7 +73,7 @@
                             "    params:{lineId:record.get('ServiceId')},",
                             "    success:function(reply){",
                             "        Ext.ComponentQuery.query('#trainLineStopsList')[0].getStore().setData(reply.data);",
-                            "        Ext.ComponentQuery.query('#cardsScreen')[0].setActiveItem('#trainLineStopsScreen');",
+                            "        Ext.ComponentQuery.query('#cardsScreen')[0].setScreen('trainLineStopsScreen');",
                             "        Ext.ComponentQuery.query('#stopsTitlebar')[0].setStyle('background:#'+record.get('RouteColorCode')+';');",
                             "        var bar = Ext.ComponentQuery.query('#stopsTitlebar')[0].setTitle('<span style=\"text-shadow:none; color:#'+record.get('RouteTextColor')+';\">'+record.get('NiceName')+'</span>');",
                             "",

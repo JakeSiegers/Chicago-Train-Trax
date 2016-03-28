@@ -58,13 +58,31 @@ Ext.define('TrainTrax.view.Cards', {
             success:function(reply){
                 this.unmask();
                 Ext.ComponentQuery.query('#trainLineList')[0].getStore().setData(reply.data);
-                this.setActiveItem('#trainLinesScreen');
+                this.setScreen('trainLinesScreen');
             },
             failure:function(){
                 this.unmask();
             },
             scope:this
         });
+    },
+
+    setScreen: function(itemId, goingBack) {
+        if(goingBack){
+            this.getLayout().setAnimation({
+                type:'cover',
+                //duration:'500',
+                direction:'right',
+                easing:'ease-out'
+            });
+        }else{
+            this.getLayout().setAnimation({
+                type:'reveal',
+                easing:'ease-out'
+            });
+        }
+        this.setActiveItem('#'+itemId);
+
     }
 
 });

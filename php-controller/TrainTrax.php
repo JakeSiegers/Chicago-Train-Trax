@@ -60,7 +60,7 @@
             }
 
             $stops = $this->cta->trainStopsApiCall(array(CTAWrapper::$TRAIN_LINES[$lineId]['trainStopsId']=>true));
-
+            $mapIds = array();
             $outData = array();
             foreach($stops as $stop){
                 $outData[] = array(
@@ -72,7 +72,19 @@
                     $stop['stop_id'],
                     $stop['stop_name']
                 );
+
+                $mapIds[$stop['stop_id']] = $stop['stop_id'];
             }
+
+
+            $idGroups = array_chunk(array_values($mapIds),4);
+            foreach($idGroups as $group){
+                $results = $this->cta->trainApiCall('arrivals',array('stpid'=>$group));
+                echo '<pre style="border:solid green 4px;">';
+                var_dump($results);
+                echo '</pre>';
+            }
+
 
             $this->outputSuccessDataJson($outData);
         }

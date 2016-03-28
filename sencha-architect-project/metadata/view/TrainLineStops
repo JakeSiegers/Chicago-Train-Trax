@@ -58,7 +58,7 @@
                             "userConfig": {
                                 "fn": "onMybuttonTap",
                                 "implHandler": [
-                                    "Ext.ComponentQuery.query('#cardsScreen')[0].setActiveItem('#trainLinesScreen');"
+                                    "Ext.ComponentQuery.query('#cardsScreen')[0].setScreen('trainLinesScreen',true);"
                                 ],
                                 "name": "tap"
                             },
@@ -143,7 +143,7 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>{direction_id} {stop_name}</div>"
+                            "<div>{direction_id} - {stop_name}</div>"
                         ]
                     },
                     "name": "itemTpl",

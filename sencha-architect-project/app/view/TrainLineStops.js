@@ -64,7 +64,7 @@ Ext.define('TrainTrax.view.TrainLineStops', {
                 xtype: 'list',
                 itemId: 'trainLineStopsList',
                 itemTpl: [
-                    '<div>{direction_id} {stop_name}</div>'
+                    '<div>{direction_id} - {stop_name}</div>'
                 ],
                 store: 'TrainLineStopsStore'
             }
@@ -79,7 +79,7 @@ Ext.define('TrainTrax.view.TrainLineStops', {
     },
 
     onMybuttonTap: function(button, e, eOpts) {
-        Ext.ComponentQuery.query('#cardsScreen')[0].setActiveItem('#trainLinesScreen');
+        Ext.ComponentQuery.query('#cardsScreen')[0].setScreen('trainLinesScreen',true);
     }
 
 });
