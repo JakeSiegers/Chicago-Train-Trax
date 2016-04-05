@@ -1,6 +1,8 @@
 <?php
 
     abstract class TrainBase{
+        private $outputJson;
+
         function utf8_encode_all($data){
             if (is_string($data)){
                 return utf8_encode($data);

@@ -182,13 +182,10 @@
         }
     },
     "tabState": {
-        "openTabs": [
-            "7bb2023c-56dc-46a9-aa83-80f1d2c91e49",
-            "47da8fa2-4236-45ad-86d1-eb00552a4b99"
-        ]
+        "openTabs": []
     },
     "canvasState": {
-        "topInstance": "12805de3-7c09-49d8-baa7-7213e414f2e0"
+        "topInstance": null
     },
     "inspectorState": {
         "topInstance": "47da8fa2-4236-45ad-86d1-eb00552a4b99",

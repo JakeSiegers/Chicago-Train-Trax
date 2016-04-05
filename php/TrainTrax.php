@@ -1,6 +1,6 @@
 <?php
 
-    require_once($_SERVER['DOCUMENT_ROOT'].'/inc/php/Libraries/CTA-PHP-Wrapper/CTAWrapper.php');
+    require_once('../inc/CTA-PHP-Wrapper/CTAWrapper.php');
     require_once('TrainBase.php');
 
     class TrainTrax extends TrainBase{
@@ -11,12 +11,14 @@
             $trainKey = '';
             require('Config.php'); //Sets Train Key variable (Also, keeps the key out of the repo).
             $this->cta = new CTAWrapper(array(
-                'trainApiKey' => $trainKey
+                'trainApiKey' => $trainKey,
+                'cachePath' => '../'
             ));
 
         }
 
         function listAllLines(){
+
             $alertIds = array();
             foreach(CTAWrapper::$TRAIN_LINES as $alertId => $lineData){
                 $alertIds[] = $alertId;
