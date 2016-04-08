@@ -20,21 +20,21 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
-    stores: [
-        'TrainLineStore',
-        'TrainLineStopsStore'
-    ],
-    views: [
-        'Cards',
-        'TrainLines',
-        'Start',
-        'TrainLineStops'
-    ],
-    name: 'TrainTrax',
+	stores: [
+		'TrainLineStore',
+		'TrainLineStopsStore'
+	],
+	views: [
+		'Cards',
+		'TrainLines',
+		'Start',
+		'TrainLineStops'
+	],
+	name: 'TrainTrax',
 
-    launch: function() {
+	launch: function() {
 
-        Ext.create('TrainTrax.view.Cards', {fullscreen: true});
-    }
+		Ext.create('TrainTrax.view.Cards', {fullscreen: true});
+	}
 
 });

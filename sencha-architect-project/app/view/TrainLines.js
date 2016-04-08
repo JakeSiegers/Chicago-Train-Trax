@@ -24,7 +24,7 @@ Ext.define('TrainTrax.view.TrainLines', {
 	],
 
 	config: {
-		layout: 'fit',
+		layout: 'vbox',
 		items: [
 			{
 				xtype: 'toolbar',
@@ -32,7 +32,13 @@ Ext.define('TrainTrax.view.TrainLines', {
 				title: 'Train Trax'
 			},
 			{
+				xtype: 'container',
+				flex: 0.5,
+				html: '<iframe frameborder="0" style="border:0; width:100%; height:100%" src="https://www.google.com/maps/embed/v1/place?q=42.2324753%2C-88.3441376&key=AIzaSyDV7JR5io6wpfo5UN56Ny_uEFqX71HMFGM" allowfullscreen></iframe> '
+			},
+			{
 				xtype: 'list',
+				flex: 1,
 				itemId: 'trainLineList',
 				itemCls: 'tt_lineListItem',
 				itemTpl: [
